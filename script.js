@@ -40,16 +40,9 @@ const teamMembers = [
 
 
 // Mettiamo tutte le card in pagina
+const containerEl = document.getElementById('cnt')
 
-        // <div class="card flex-c col col-md-6 col-lg-4">
-        //     <img class="card-image" src="./img/female1.png" alt="">
-        //     <div class="card-body">
-        //         <h5>Name</h5>
-        //         <span>Job</span>
-        //         <br>
-        //         <a href="#">Mail</a>
-        //     </div>
-        // </div>
+
 
 for (let i = 0; i<teamMembers.length; i++) {
 
@@ -72,11 +65,35 @@ for (let i = 0; i<teamMembers.length; i++) {
     </div>
   `
 
-  const containerEl = document.getElementById('cnt')
   containerEl.insertAdjacentHTML('beforeend', innerhtml)
   
 }
 
 // Form to add new cards
+const formEl = document.getElementById('formy')
 
+formEl.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  const name = document.getElementById('name-input').value
+  const role = document.getElementById('role-input').value
+  const email = document.getElementById('email-input').value
+  const img = document.getElementById('img-input').value
+
+  const innerhtml = `
+    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+      <div class="card">
+      <div class="flex-c">
+        <img class="card-image" src="./${img}" alt="">
+        <div class="card-body">
+            <h5>${name}</h5>
+            <span>${role}</span>
+            <a href="#">${email}</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  `
+  containerEl.insertAdjacentHTML('beforeend', innerhtml)
+})
 
