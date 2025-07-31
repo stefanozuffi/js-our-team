@@ -1,6 +1,63 @@
-.flex-c {
-    display: flex;
-    flex-direction: column;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Montserrat', sans-serif;
 }
 
+.container {
+    margin: 4% auto;
+    width: 100%;
+}
+
+.flex-c {
+    display: flex;
+}
+
+header {
+    * {
+      margin: 3%;  
+    }
+    h1 {
+       font-weight: 900;
+       color: rgb(211, 67, 112);
+    }
+    
+}
+
+.card {
+    background-color: black;
+    border-radius: 0;
+    overflow: hidden; 
+    
+    h5 , span {
+        color: white;
+    }
+    
+    .card-image {
+        width: 32%;
+    }
+
+    h5 {
+        font-weight: 900;
+        font-size: clamp(1.3rem, 1rem, 1rem) 
+    }
+    
+    span {
+        font-size: clamp(0.8rem, 0.9rem, 1rem);
+    }
+    
+    a {
+        font-size: clamp(0.7rem, 0.8rem, 0.9rem);
+        text-decoration: none;
+        word-break: break-word; 
+    }
+}
+
+.card-body {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 0.1rem;
+}
 

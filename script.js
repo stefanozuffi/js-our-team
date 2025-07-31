@@ -58,13 +58,16 @@ for (let i = 0; i<teamMembers.length; i++) {
   const {name, role, email, img} = thisMember
 
   const innerhtml = `
-    <div class="card flex-c col-sm-12 col-md-6 col-lg-4">
-      <img class="card-image" src="./${img}" alt="">
-      <div class="card-body">
-          <h5>${name}</h5>
-          <span>${role}</span>
-          <br>
-          <a href="#">${email}</a>
+    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+      <div class="card">
+      <div class="flex-c">
+        <img class="card-image" src="./${img}" alt="">
+        <div class="card-body">
+            <h5>${name}</h5>
+            <span>${role}</span>
+            <a href="#">${email}</a>
+        </div>
+      </div>
       </div>
     </div>
   `
